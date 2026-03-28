@@ -8,3 +8,6 @@ langchain-ollama
 langchain-groq
 langchain-community
 langgraph
+pypdf
+beautifulsoup4
+wikipedia
