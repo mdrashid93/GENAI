@@ -17,6 +17,7 @@ docs=loader.load()
 #split the documents into chunks
 splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
 docs=splitter.split_documents(documents=docs)
+print(len(docs))
 
 # embeddings and vector store
 embeddings=OpenAIEmbeddings(model="text-embedding-3-small")
