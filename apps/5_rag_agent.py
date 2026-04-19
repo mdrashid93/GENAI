@@ -4,7 +4,7 @@ load_dotenv()
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings,ChatOpenAI
-from langchain_vectorstores import inMemoryVectorStore
+from langchain_vectorstores import InMemoryVectorStore
 from langchain.agents import create_agent
 from langchian.tools import tool
 from langchain_groq import ChatGroq
@@ -21,7 +21,7 @@ print(len(docs))
 
 # embeddings and vector store
 embeddings=OpenAIEmbeddings(model="text-embedding-3-small")
-vector_db=inMemoryVectorStore.from_documents(documents=docs,embedding=embeddings)
+vector_db=InMemoryVectorStore.from_documents(documents=docs,embedding=embeddings)
 
 #create the agent
 llm=ChatGroq(model="openai/gpt-oss-20b")
